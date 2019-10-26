@@ -1,13 +1,6 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #87a9ee;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,7 +9,43 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+p {
+  color: rgb(229, 240, 198);
+  font-family: fantasy;
+  font-weight: 900;
+  border-top: 2px dotted;
+  border-bottom: 2px dotted;
+  border-top-color: rgb(3, 54, 48);
+  border-bottom-color: rgb(3, 54, 48);
+}
+button {
+  background-color: rgb(141, 143, 138);
+  height: 3rem;
+  width: 6rem;
+  border-radius: 30%;
+  border: 0;
+  box-shadow: 0 4px 0 rgb(57, 77, 4), 0 3px 8px rgba(0, 0, 0, 0.2);
+  font-weight: 900;
+  color: rgb(46, 7, 109);
+  padding: 3px;
+  cursor: pointer;
+}
 
-.App-link {
-  color: #09d3ac;
+button:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) inset;
+  top: 3px;
+  position: relative;
+  background-color: snow;
+}
+
+form {
+  color: rgb(2, 58, 2);
+  font-size: 1rem;
+  font-family: fantasy;
+  font-weight: 800;
+  
+}
+video{
+  width:300px;
+  height:200px;;
 }
