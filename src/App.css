@@ -8,6 +8,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 2em;
 }
 p {
   color: rgb(229, 240, 198);
@@ -15,20 +16,20 @@ p {
   font-weight: 900;
   border-top: 2px dotted;
   border-bottom: 2px dotted;
-  border-top-color: rgb(3, 54, 48);
-  border-bottom-color: rgb(3, 54, 48);
+  border-top-color: rgb(14, 221, 197);
 }
 button {
-  background-color: rgb(141, 143, 138);
-  height: 3rem;
-  width: 6rem;
-  border-radius: 30%;
+  background-color: rgb(196 230 144);
+  height: 3em;
+  width: 6em;
+  border-radius: 10px;
   border: 0;
-  box-shadow: 0 4px 0 rgb(57, 77, 4), 0 3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 4px 9px rgb(248 232 91);
   font-weight: 900;
-  color: rgb(46, 7, 109);
+  color: rgb(173, 20, 110);
   padding: 3px;
   cursor: pointer;
+  font-family: monospace;
 }
 
 button:active {
@@ -43,9 +44,28 @@ form {
   font-size: 1rem;
   font-family: fantasy;
   font-weight: 800;
-  
 }
-video{
-  width:300px;
-  height:200px;;
+video {
+  width: 300px;
+  height: 200px;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  form {
+    color: #f3d680;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    font-size: 0.8em;
+  }
+  button {
+    width: 5em;
+    height: 3em;
+    border-radius: 5px;
+    margin: 1.5em;
+  }
 }
