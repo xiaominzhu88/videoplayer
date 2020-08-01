@@ -1,29 +1,30 @@
-import React from "react";
-import "./App.css";
-import { Button } from "./Button.js";
-import { Menu } from "./Menu.js";
-import Video from "./Video";
-import eatVideo from "./Lola-eat.MP4";
-import playVideo from "./Lola-play.MOV";
-import runVideo from "./Lola-run.MOV";
-import swimVideo from "./Lola-excite.MOV";
+import React from 'react';
+import './App.css';
+import { Button } from './Button.js';
+import { Menu } from './Menu.js';
+import Video from './Video';
+import eatVideo from './Lola-eat.MP4';
+import playVideo from './Lola-play.MOV';
+import runVideo from './Lola-run.MOV';
+import swimVideo from './Lola-swim.MP4';
+import driveVideo from './Lola-drive.MP4';
 
 const VIDEOS = {
   eat: eatVideo,
   play: playVideo,
   run: runVideo,
-  swim: swimVideo
+  swim: swimVideo,
+  drive: driveVideo,
 };
 
 class VideoPlayer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { src: VIDEOS.run };
+    this.state = { src: VIDEOS.drive };
     this.chooseVideo = this.chooseVideo.bind(this);
   }
   handleClick() {
-    let talk =
-      "Hey, i am Lola, a french bulldog, here you will see my videos how i play with my papa";
+    const talk = "Hey, I'm Lola, a french bulldog, welcome to my videos";
     alert(talk);
   }
 
@@ -32,11 +33,16 @@ class VideoPlayer extends React.Component {
     this.setState({ src: VIDEOS[newVideo] });
   }
   render() {
-    console.log("-->", this.state);
+    console.log('-->', this.state);
     return (
       <div className="App">
         <h1>Welcome to my Lola-Videoplayer</h1>
-        <p>Hello! I will try something here!</p>
+        <p>
+          Hello! I will try something here!
+          <span role="img" aria-label="emoji zucker">
+            🍡
+          </span>
+        </p>
         <Button onClick={this.handleClick} />
         <br />
         <br />
@@ -49,6 +55,3 @@ class VideoPlayer extends React.Component {
 }
 
 export default VideoPlayer;
-
-/*ReactDOM.render(<VideoPlayer />,
-  document.getElementById('App'));*/
